@@ -1,0 +1,24 @@
+# Query: NEXT_PUBLIC
+# ContextLines: 1
+
+7 results - 2 files
+
+sanity.cli.ts:
+  6  
+  7: const projectId = process.env.SANITY_STUDIO_SANITY_PROJECT_ID
+  8: const dataset = process.env.SANITY_STUDIO_SANITY_DATASET
+  9  
+
+sanity\env.ts:
+   1  export const apiVersion =
+   2:   process.env.SANITY_STUDIO_SANITY_API_VERSION || '2024-12-08'
+   3  
+   4  export const dataset = assertValue(
+   5:   process.env.SANITY_STUDIO_SANITY_DATASET,
+   6:   'Missing environment variable: SANITY_STUDIO_SANITY_DATASET'
+   7  )
+
+   9  export const projectId = assertValue(
+  10:   process.env.SANITY_STUDIO_SANITY_PROJECT_ID,
+  11:   'Missing environment variable: SANITY_STUDIO_SANITY_PROJECT_ID'
+  12  )
